@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Recipe</title>
+</head>
+<body>
+    <h1>Edit Recipe {{ recipe.name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="ingredients">Ingredients</label>
+        <input type="text" id="ingredients" name="ingredients"><br>
+
+        <label for="instructions">Instructions</label>
+        <input type="text" id="instructions" name="instructions"><br>
+
+        <input type="submit" value="Edit Recipe">
+    </form>
+</body>
+</html>

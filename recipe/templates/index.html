@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Recipes</title>
+</head>
+<body>
+    <h1>Recipes:</h1>
+    <ul>
+        {% for recipe in recipes %}
+            <li>{{recipe.name}}</li>
+            <button><a href="{% url 'details' recipe.name %}">Details</a></button>
+            <button><a href="{% url 'edit' recipe.name %}">Edit</a></button>
+        {% endfor %}
+    </ul>
+    <button><a href="{% url 'add' %}">Add Recipe</a></button>
+</body>
+</html>
